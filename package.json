@@ -21,23 +21,21 @@
     "isProvider": true
   },
   "author": {
-    "email": "hi@strapi.io",
-    "name": "Strapi team",
-    "url": "https://strapi.io"
+    "email": "stephen@crookneckconsulting.com",
+    "name": "Stephen Trainor, adapted from Strapi team code",
   },
   "maintainers": [
     {
-      "name": "Strapi team",
-      "email": "hi@strapi.io",
-      "url": "https://strapi.io"
+      "name": "Stephen Trainor",
+      "email": "stephen@crookneckconsulting.com",
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/strapi/strapi.git"
+    "url": "git://github.com/stephent/strapi-provider-upload-aws-s3-cdn.git"
   },
   "bugs": {
-    "url": "https://github.com/strapi/strapi/issues"
+    "url": "https://github.com/stephent/strapi-provider-upload-aws-s3-cdn/issues"
   },
   "engines": {
     "node": ">=10.16.0 <=14.x.x",
@@ -46,6 +44,5 @@
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "test": "echo \"no tests yet\""
-  },
-  "gitHead": "33552e43b856e5358fd0d7bf9f4c2339bab6dc4b"
+  }
 }
