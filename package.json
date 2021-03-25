@@ -1,5 +1,5 @@
 {
-  "name": "strapi-provider-upload-aws-s3-cdn",
+  "name": "@stephent/strapi-provider-upload-aws-s3-cdn",
   "version": "1.0.0",
   "description": "AWS S3 provider for strapi upload with optional CDN configuration",
   "homepage": "https://strapi.io",
