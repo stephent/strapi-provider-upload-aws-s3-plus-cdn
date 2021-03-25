@@ -1,5 +1,10 @@
-# strapi-provider-upload-aws-s3
+# strapi-provider-upload-aws-s3-cdn
 
+## Background
+
+This Strapi upload provider adapts the strapi-provider-upload-aws-s3, bundled with Strapi, to support writes to non-public S3 buckets plus optional download from a CDN endpoint (e.g. AWS Cloudfront).
+
+Inspired by this discussion: https://github.com/strapi/strapi/issues/5868#issuecomment-705200530
 ## Configurations
 
 Your configuration is passed down to the provider. (e.g: `new AWS.S3(config)`). You can see the complete list of options [here](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property)
@@ -22,6 +27,7 @@ module.exports = ({ env }) => ({
       params: {
         Bucket: env('AWS_BUCKET'),
       },
+      cdnUrl: env("CDN_URL"), // Optional CDN URL
     },
   },
   // ...

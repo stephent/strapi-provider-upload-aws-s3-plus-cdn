@@ -1,7 +1,7 @@
 {
-  "name": "strapi-provider-upload-aws-s3",
-  "version": "3.5.3",
-  "description": "AWS S3 provider for strapi upload",
+  "name": "strapi-provider-upload-aws-s3-cdn",
+  "version": "1.0.0",
+  "description": "AWS S3 provider for strapi upload with optional CDN configuration",
   "homepage": "https://strapi.io",
   "keywords": [
     "upload",
@@ -14,20 +14,20 @@
   },
   "main": "./lib",
   "dependencies": {
-    "aws-sdk": "2.857.0",
-    "lodash": "4.17.20"
+    "aws-sdk": "2.872.0",
+    "lodash": "4.17.21"
   },
   "strapi": {
     "isProvider": true
   },
   "author": {
     "email": "stephen@crookneckconsulting.com",
-    "name": "Stephen Trainor, adapted from Strapi team code",
+    "name": "Stephen Trainor, adapted from Strapi team code"
   },
   "maintainers": [
     {
       "name": "Stephen Trainor",
-      "email": "stephen@crookneckconsulting.com",
+      "email": "stephen@crookneckconsulting.com"
     }
   ],
   "repository": {
@@ -44,5 +44,8 @@
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "test": "echo \"no tests yet\""
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
