@@ -1,20 +1,21 @@
 {
-  "name": "@stephent/strapi-provider-upload-aws-s3-cdn",
-  "version": "1.0.1",
-  "description": "AWS S3 provider for strapi upload with optional CDN configuration",
+  "name": "strapi-provider-upload-aws-s3-with-cdn",
+  "version": "1.0.2",
+  "description": "AWS S3 provider for strapi upload with optional CDN configuration. Adapted from strapi-provider-upload-aws-s3",
   "homepage": "https://strapi.io",
   "keywords": [
     "upload",
     "aws",
     "s3",
-    "strapi"
+    "strapi",
+    "cdn"
   ],
   "directories": {
     "lib": "./lib"
   },
   "main": "./lib",
   "dependencies": {
-    "aws-sdk": "2.872.0",
+    "aws-sdk": "2.874.0",
     "lodash": "4.17.21"
   },
   "strapi": {
@@ -22,7 +23,7 @@
   },
   "author": {
     "email": "stephen@crookneckconsulting.com",
-    "name": "Stephen Trainor, adapted from Strapi team code"
+    "name": "Stephen Trainor"
   },
   "maintainers": [
     {
@@ -32,10 +33,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/stephent/strapi-provider-upload-aws-s3-cdn.git"
+    "url": "git://github.com/stephent/strapi-provider-upload-aws-s3-with-cdn.git"
   },
   "bugs": {
-    "url": "https://github.com/stephent/strapi-provider-upload-aws-s3-cdn/issues"
+    "url": "https://github.com/stephent/strapi-provider-upload-aws-s3-with-cdn/issues"
   },
   "engines": {
     "node": ">=10.16.0 <=14.x.x",
@@ -46,6 +47,6 @@
     "test": "echo \"no tests yet\""
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://registry.npmjs.org/"
   }
 }
