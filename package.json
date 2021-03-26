@@ -1,6 +1,6 @@
 {
-  "name": "strapi-provider-upload-aws-s3-with-cdn",
-  "version": "1.0.2",
+  "name": "strapi-provider-upload-aws-s3-plus-cdn",
+  "version": "1.0.3",
   "description": "AWS S3 provider for strapi upload with optional CDN configuration. Adapted from strapi-provider-upload-aws-s3",
   "homepage": "https://strapi.io",
   "keywords": [
@@ -33,10 +33,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/stephent/strapi-provider-upload-aws-s3-with-cdn.git"
+    "url": "git://github.com/stephent/strapi-provider-upload-aws-s3-plus-cdn.git"
   },
   "bugs": {
-    "url": "https://github.com/stephent/strapi-provider-upload-aws-s3-with-cdn/issues"
+    "url": "https://github.com/stephent/strapi-provider-upload-aws-s3-plus-cdn/issues"
   },
   "engines": {
     "node": ">=10.16.0 <=14.x.x",

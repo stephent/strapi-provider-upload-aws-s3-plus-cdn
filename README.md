@@ -1,4 +1,4 @@
-# strapi-provider-upload-aws-s3-with-cdn
+# strapi-provider-upload-aws-s3-plus-cdn
 
 ## Background
 
@@ -21,7 +21,7 @@ See the [using a provider](https://strapi.io/documentation/developer-docs/latest
 module.exports = ({ env }) => ({
   // ...
   upload: {
-    provider: 'aws-s3-with-cdn',
+    provider: 'aws-s3-plus-cdn',
     providerOptions: {
       accessKeyId: env('AWS_ACCESS_KEY_ID'),
       secretAccessKey: env('AWS_ACCESS_SECRET'),
