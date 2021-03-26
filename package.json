@@ -1,6 +1,6 @@
 {
   "name": "strapi-provider-upload-aws-s3-plus-cdn",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "AWS S3 provider for strapi upload with optional CDN configuration. Adapted from strapi-provider-upload-aws-s3",
   "homepage": "https://strapi.io",
   "keywords": [
@@ -48,5 +48,12 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1"
   }
 }
