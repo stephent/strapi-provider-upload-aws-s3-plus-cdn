@@ -15,7 +15,7 @@
   },
   "main": "./lib",
   "dependencies": {
-    "aws-sdk": "2.874.0"
+    "aws-sdk": "2.1260.0"
   },
   "strapi": {
     "isProvider": true
@@ -38,7 +38,7 @@
     "url": "https://github.com/stephent/strapi-provider-upload-aws-s3-plus-cdn/issues"
   },
   "engines": {
-    "node": ">=10.16.0 <=14.x.x",
+    "node": ">=14.19.1 <=18.x.x",
     "npm": ">=6.0.0"
   },
   "license": "SEE LICENSE IN LICENSE",
