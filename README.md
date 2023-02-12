@@ -45,6 +45,48 @@ module.exports = ({ env }) => ({
   // ...
 });
 ```
+
+### Security Middleware Configuration
+
+Due to the default settings in the Strapi Security Middleware you will need to modify the `contentSecurityPolicy` settings to properly see thumbnail previews in the Media Library. You should replace `strapi::security` string with the object bellow instead as explained in the [middleware configuration](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/configurations/required/middlewares.html#loading-order) documentation.
+
+`./config/middlewares.js`
+
+```js
+module.exports = [
+  // ...
+  {
+    name: 'strapi::security',
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          'connect-src': ["'self'", 'https:'],
+          'img-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'dl.airtable.com',
+            'yourBucketName.s3.yourRegion.amazonaws.com',
+          ],
+          'media-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'dl.airtable.com',
+            'yourBucketName.s3.yourRegion.amazonaws.com',
+          ],
+          upgradeInsecureRequests: null,
+        },
+      },
+    },
+  },
+  // ...
+];
+```
+
+Comment: this guidance follows that given by the official [Strapi S3 Upload Provider](https://github.com/strapi/strapi/blob/master/packages/providers/upload-aws-s3/README.md). However, you may prefer to use the `AWS_REGION` and `AWS_BUCKET` env vars instead to construct the bucket URL.
+
 ## Note
 
 Strapi will use the configured S3 bucket for upload and delete operations, but writes the CDN url (if configured) into the database record.
