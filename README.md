@@ -30,7 +30,7 @@ module.exports = ({ env }) => ({
   // ...
   upload: {
     config: {
-      provider: 'aws-s3-plus-cdn',
+      provider: 'strapi-provider-upload-aws-s3-plus-cdn',
       providerOptions: {
         accessKeyId: env('AWS_ACCESS_KEY_ID'),
         secretAccessKey: env('AWS_ACCESS_SECRET'),
@@ -50,6 +50,8 @@ module.exports = ({ env }) => ({
 Strapi will use the configured S3 bucket for upload and delete operations, but writes the CDN url (if configured) into the database record.
 
 In the event that you need to change the storage backend in the future, to avoid the need to re-upload assets or to write custom queries to update Strapi database records, it is probably best to configure your CDN to use a URL that you control (e.g. use assets.mydomain.com rather than d12345687abc.cloudfront.net). If you need to change the storage backend later, you can simply update your DNS record.
+
+If you have previously been using `@strapi/provider-upload-aws-s3` and already have some assets uploaded to the Media Library, you can switch to using this package instead, making the configuration changes noted above. Any existing assets will retain their previously configured URLs, but new assets will be saved with URLs using `CDN_URL`. To update older assets with S3 URLs, you will need to execute appropriate update queries on your database.
 
 ## Resources
 
